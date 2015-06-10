@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="apple-mobile-web-app-capable" content="YES"/>
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+    <meta name="google-site-verification" content=""/>
+    <meta name="yandex-verification" content=""/>
+
+    <title>Material Design Typography</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/material-design-typography.css">
+    <link rel="stylesheet" href="../bower_components/material-design-color-palette/css/material-design-color-palette.min.css">
+</head>
+<body>
+
+<div class="container" style="max-width: 840px">
+
+    <h1 class="mdc-text-teal">Typography <small>by Google</small></h1>
+
+    <p class="lead">Since the Ice Cream Sandwich release, Roboto has been the standard typeface on Android. Since Froyo, Noto has been the standard typeface on Android for all languages not covered by Roboto. Noto is also the standard typeface for all languages on Chrome OS.</p>
+
+    <article>
+        <header class="page-header">
+            <h2 class="mdc-text-teal">Language categorization</h2>
+        </header>
+        <section>
+            <p>Language scripts can be divided into three categories:</p>
+            <p><strong>English and English-like</strong>: Latin (except Vietnamese), Greek, and Cyrillic scripts, supported by both Roboto and Noto. Roboto has been extended to completely cover all Latin, Greek, and Cyrillic characters as defined in Unicode 7.0. The number of supported characters has doubled from previous releases, from about 2000 to about 4000 characters.</p>
+            <p><strong>Tall</strong>: Language scripts that require extra line height to accommodate larger glyphs, including South and Southeast Asian and Middle-Eastern languages, like Arabic, Hindi, Telugu, Thai, Vietnamese. Noto supports these languages with two weights.</p>
+            <p><strong>Dense</strong>: Language scripts that require extra line height to accommodate larger glyphs, including Chinese, Japanese, and Korean. Noto supports these languages with seven weights.</p>
+            <p>See the full list in the <a href="/design/spec/style/typography.html#typography-language-categories-reference">language categories table</a>.</p>
+        </section>
+    </article>
+
+    <article>
+        <header class="page-header">
+            <h2 class="mdc-text-teal">Typeface</h2>
+        </header>
+        <section>
+            <h3>Roboto</h3>
+            <p>Roboto has been refined extensively to work across the wider set of supported platforms. It is slightly wider and rounder, giving it greater clarity and making it more optimistic.</p>
+        </section>
+        <section>
+            <h3>Roboto font weights</h3>
+            <p>Roboto has six weights: Thin, Light, Regular, Medium, Bold, and Black.</p>
+        </section>
+        <section>
+            <h3>Noto</h3>
+            <p>Noto’s vertical metrics are compatible with Roboto.</p>
+        </section>
+        <section>
+            <h3>Noto font weights</h3>
+            <p>Noto Sans CJK (Chinese, Japanese, and Korean) has seven weights: Thin, Light, DemiLight, Regular, Medium, Bold, and Black. The weight of Noto Sans CJK Regular is the same as Roboto Regular.</p>
+            <p>Noto fonts for Thai, Devanagari, and all other major living languages have Regular and Bold weights.</p>
+        </section>
+        <section>
+            <h3>Hinted fonts</h3>
+            <p>Hints are the instructions embedded in a font on how to modify (distort) a glyph to look better on low-resolution displays. As a tradeoff, a hinted font consumes more space than the unhinted version.</p>
+            <p>Both Roboto and Noto have hinted and unhinted versions. Google recommends:</p>
+            <ul>
+                <li>Use the unhinted versions on Android and on Mac OS X, which doesn’t implement hints.</li>
+                <li>Use hinted fonts on Chrome OS, Windows, and Linux.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Font stack</h3>
+            <p>For both Android and web properties, the font stack should specify Roboto, Noto, and then sans-serif.</p>
+        </section>
+    </article>
+
+</div>
+
+<div style="width: 600px; margin: 40px auto">
+    <h1>h1. Bootstrap heading <small>Secondary text</small></h1>
+    <h2>h2. Bootstrap heading <small>Secondary text</small></h2>
+    <h3>h3. Bootstrap heading <small>Secondary text</small></h3>
+    <h4>h4. Bootstrap heading <small>Secondary text</small></h4>
+    <h5>h5. Bootstrap heading <small>Secondary text</small></h5>
+    <h6>h6. Bootstrap heading <small>Secondary text</small></h6>
+
+
+    <div class="mdt-display-4">.display-4</div>
+    <div class="mdt-display-3">.display-3</div>
+    <div class="mdt-display-2">.display-2</div>
+    <div class="mdt-display-1">.display-1</div>
+    <div class="mdt-headline">.headline</div>
+    <div class="mdt-title">.title</div>
+    <div class="mdt-subhead-2">.subhead-2</div>
+    <div class="mdt-subhead-1">.subhead-1</div>
+    <div class="mdt-body-2">.body-2</div>
+    <div class="mdt-body-1">.body-1</div>
+    <div class="mdt-caption">.caption</div>
+    <div class="mdt-label">.label</div>
+    <div class="mdt-menu">.menu</div>
+    <div class="mdt-button">.button</div>
+</div>
+
+
+</body>
+</html>
