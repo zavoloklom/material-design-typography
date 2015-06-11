@@ -1,0 +1,33 @@
+{
+  "name": "bootstrap-material-typography-gh-pages",
+  "description": "Bootstrap Material Typography LESS/CSS Toolkit GH-Pages",
+  "keywords": [
+    "material",
+    "design",
+    "typography"
+  ],
+  "version": "0.1.0",
+  "homepage": "https://github.com/zavoloklom/material-design-typography",
+  "authors": [
+    "Sergey Kupletsky <s.kupletsky@gmail.com>"
+  ],
+  "license": "Attribution-ShareAlike 4.0 International license",
+  "main": [
+    "./index.html"
+  ],
+  "ignore": [
+    "*/.*",
+    "*.json",
+    "*.md",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-design-iconic-font": "~1",
+    "material-design-color-palette": "~1",
+    "bootstrap": "~3.3.4"
+  }
+}
