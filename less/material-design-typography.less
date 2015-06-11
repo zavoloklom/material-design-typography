@@ -144,7 +144,7 @@ dl {
 }
 dt,
 dd {
-  font-variant(body-1);
+  .font-variant(body-1);
 }
 dt {
   font-weight: 500;
@@ -155,20 +155,89 @@ dd {
 }
 
 //## Horizontal description lists
-
+// TODO: This should be re-declared after finished flex-grid
+// Then I can use @grid-float-breakpoint instead of 768px and special flex classes
 .dl-horizontal {
-  @media (min-width: @grid-float-breakpoint) {
+  @media (min-width: 768px) {
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+
     dt {
-      float: left;
-      width: (@dl-horizontal-offset - 20);
-      clear: left;
+      width: 180px;
+      margin-right: @padding-base;
       text-align: right;
       .text-overflow();
     }
     dd {
-      margin-left: @dl-horizontal-offset;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
     }
   }
+}
+
+//## Abbreviations and acronyms
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted @mdc-black-lighter;
+}
+.initialism {
+  font-size: 90%;
+  .text-uppercase();
+}
+
+//## Blockquotes
+blockquote {
+  .lead();
+  padding: (@line-height-computed / 2) @line-height-computed; // 10px 20px
+  margin: 0 0 @line-height-computed; // 0 0 20px
+  border-left: 5px solid @mdc-black-light;
+
+  p,
+  ul,
+  ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  footer {
+    display: block;
+    .font-variant(caption);
+
+    &:before {
+      content: '\2014 \00A0'; // em dash, nbsp
+    }
+  }
+
+  //## Opposite alignment of blockquote
+  &-reverse {
+    border-right: 5px solid @mdc-black-light;
+    border-left: 0;
+    text-align: right;
+
+    footer {
+      &:before { content: ''; }
+      &:after {
+        content: '\00A0 \2014'; // nbsp, em dash
+      }
+    }
+  }
+}
+
+//## Addresses
+address {
+  margin-bottom: @line-height-computed; // 20px
+  font-style: normal;
 }
 
 //## Contextual colors
@@ -225,14 +294,14 @@ dd {
 }
 .mdt-button {
   .font-variant(button);
-  text-transform: uppercase;
+  .text-uppercase();
 }
 
 .mdt-display-4, .mdt-display-3, .mdt-display-2, .mdt-display-1  {
-  // margin: (@line-height-computed / 2) 0 (@line-height-computed * 1.5) 0; // 10px 0 30px 0
+  margin: (@line-height-computed) 0 (@line-height-computed * 1.5); // 20px 0 30px
 }
 
 .mdt-headline, .mdt-title, .mdt-subhead-2, .mdt-subhead-1, .mdt-body-2, .mdt-body-1 {
-  // margin: (@line-height-computed / 2) 0; // 10px 0
+  margin: (@line-height-computed) 0; // 20px 0
 }
 
