@@ -51,7 +51,6 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   small,
   .small {
-    .font-variant(caption);
     font-size: 50%;
     text-transform: uppercase;
   }
@@ -77,6 +76,118 @@ h6, .h6 {
   border: 0;
   border-top: 1px solid @mdc-black-lighter;
 }
+
+//## Small text
+small,
+.small {
+  .font-variant(caption);
+}
+
+//## Marked text
+mark,
+.mark {
+  background-color: @mdc-yellow-A100;
+  padding: @padding-base/2;
+}
+
+//## Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+//## Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+//## Lists
+//## Unordered and Ordered lists
+ul,
+ol {
+  padding-left: @line-height-computed; // 20px
+  margin-top: 0;
+  margin-bottom: (@line-height-computed); // 20px - like margin-bottom in paragraph
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+//## Unstyled lists
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+//## Inline lists
+.list-inline {
+  .list-unstyled();
+
+  > li {
+    display: inline-block;
+    padding: 0 @padding-base; // 0 8px
+
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+//## Description Lists
+dl {
+  margin-top: 0;
+  margin-bottom: @line-height-computed * 2; // 40px
+}
+dt,
+dd {
+  font-variant(body-1);
+}
+dt {
+  font-weight: 500;
+}
+dd {
+  margin-left: 0;
+  margin-bottom: @line-height-computed; // 20px
+}
+
+//## Horizontal description lists
+
+.dl-horizontal {
+  @media (min-width: @grid-float-breakpoint) {
+    dt {
+      float: left;
+      width: (@dl-horizontal-offset - 20);
+      clear: left;
+      text-align: right;
+      .text-overflow();
+    }
+    dd {
+      margin-left: @dl-horizontal-offset;
+    }
+  }
+}
+
+//## Contextual colors
+.text-muted {
+  color: @mdc-black-light;
+}
+.text-primary {  }
+.text-success {  }
+.text-info    {  }
+.text-warning {  }
+.text-danger  {  }
+
+//## Contextual backgrounds
+.bg-primary { }
+.bg-success { }
+.bg-info    { }
+.bg-warning { }
+.bg-danger  { }
+
 
 //## Material Design special classes
 .mdt-display-4 {
