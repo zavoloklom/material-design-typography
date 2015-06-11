@@ -123,39 +123,8 @@ h6 .small,
 .h4 .small,
 .h5 .small,
 .h6 .small {
-  font-size: 12px;
-  line-height: 20px;
-  font-weight: 400;
-  letter-spacing: 0.2px;
-  color: rgba(0, 0, 0, 0.54);
   font-size: 50%;
   text-transform: uppercase;
-}
-h1 small-inverse,
-h2 small-inverse,
-h3 small-inverse,
-h4 small-inverse,
-h5 small-inverse,
-h6 small-inverse,
-.h1 small-inverse,
-.h2 small-inverse,
-.h3 small-inverse,
-.h4 small-inverse,
-.h5 small-inverse,
-.h6 small-inverse,
-h1 .small-inverse,
-h2 .small-inverse,
-h3 .small-inverse,
-h4 .small-inverse,
-h5 .small-inverse,
-h6 .small-inverse,
-.h1 .small-inverse,
-.h2 .small-inverse,
-.h3 .small-inverse,
-.h4 .small-inverse,
-.h5 .small-inverse,
-.h6 .small-inverse {
-  color: rgba(255, 255, 255, 0.7);
 }
 h1,
 .h1,
@@ -180,6 +149,187 @@ h6,
   margin: 40px 0;
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+small,
+.small {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: rgba(0, 0, 0, 0.54);
+}
+small-inverse,
+.small-inverse {
+  color: rgba(255, 255, 255, 0.7);
+}
+mark,
+.mark {
+  background-color: #ffff8d;
+  padding: 4px;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+ul,
+ol {
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline > li {
+  display: inline-block;
+  padding: 0 8px;
+}
+.list-inline > li:first-child {
+  padding-left: 0;
+}
+.list-inline > li:last-child {
+  padding-right: 0;
+}
+dl {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+dt,
+dd {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.87);
+}
+dt-inverse,
+dd-inverse {
+  color: #ffffff;
+}
+dt {
+  font-weight: 500;
+}
+dd {
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .dl-horizontal {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .dl-horizontal dt {
+    width: 180px;
+    margin-right: 8px;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .dl-horizontal dd {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.12);
+}
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+blockquote {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  letter-spacing: 0.05px;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 400;
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid rgba(0, 0, 0, 0.26);
+}
+blockquote-inverse {
+  color: #ffffff;
+}
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+  margin-bottom: 0;
+}
+blockquote footer {
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: rgba(0, 0, 0, 0.54);
+}
+blockquote footer-inverse {
+  color: rgba(255, 255, 255, 0.7);
+}
+blockquote footer:before {
+  content: '\2014 \00A0';
+}
+blockquote-reverse {
+  border-right: 5px solid rgba(0, 0, 0, 0.26);
+  border-left: 0;
+  text-align: right;
+}
+blockquote-reverse footer:before {
+  content: '';
+}
+blockquote-reverse footer:after {
+  content: '\00A0 \2014';
+}
+address {
+  margin-bottom: 20px;
+  font-style: normal;
+}
+.text-muted {
+  color: rgba(0, 0, 0, 0.26);
 }
 .mdt-display-4 {
   font-size: 112px;
@@ -301,4 +451,18 @@ h6,
 }
 .mdt-button-inverse {
   color: #ffffff;
+}
+.mdt-display-4,
+.mdt-display-3,
+.mdt-display-2,
+.mdt-display-1 {
+  margin: 20px 0 30px;
+}
+.mdt-headline,
+.mdt-title,
+.mdt-subhead-2,
+.mdt-subhead-1,
+.mdt-body-2,
+.mdt-body-1 {
+  margin: 20px 0;
 }
