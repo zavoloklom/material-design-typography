@@ -27,6 +27,78 @@ p {
 .lead-inverse {
   color: #ffffff;
 }
+h1,
+.h1 {
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: rgba(0, 0, 0, 0.54);
+}
+h1-inverse,
+.h1-inverse {
+  color: rgba(255, 255, 255, 0.7);
+}
+h2,
+.h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: rgba(0, 0, 0, 0.87);
+}
+h2-inverse,
+.h2-inverse {
+  color: #ffffff;
+}
+h3,
+.h3 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.87);
+}
+h3-inverse,
+.h3-inverse {
+  color: #ffffff;
+}
+h4,
+.h4 {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.87);
+}
+h4-inverse,
+.h4-inverse {
+  color: #ffffff;
+}
+h5,
+.h5 {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.87);
+}
+h5-inverse,
+.h5-inverse {
+  color: #ffffff;
+}
+h6,
+.h6 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.87);
+}
+h6-inverse,
+.h6-inverse {
+  color: #ffffff;
+}
 h1 small,
 h2 small,
 h3 small,
@@ -86,82 +158,10 @@ h6 .small-inverse,
   color: rgba(255, 255, 255, 0.7);
 }
 h1,
-.h1 {
-  font-size: 34px;
-  line-height: 40px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  color: rgba(0, 0, 0, 0.54);
-}
-h1-inverse,
-.h1-inverse {
-  color: rgba(255, 255, 255, 0.7);
-}
-h2,
-.h2 {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  color: rgba(0, 0, 0, 0.87);
-}
-h2-inverse,
-.h2-inverse {
-  color: #ffffff;
-}
-h3,
-.h3 {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  letter-spacing: 0.1px;
-  color: rgba(0, 0, 0, 0.87);
-  font-weight: 500;
-}
-h3-inverse,
-.h3-inverse {
-  color: #ffffff;
-}
-h4,
-.h4 {
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.1px;
-  color: rgba(0, 0, 0, 0.87);
-  font-weight: 500;
-}
-h4-inverse,
-.h4-inverse {
-  color: #ffffff;
-}
-h5,
-.h5 {
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 500;
-  letter-spacing: 0.1px;
-  color: rgba(0, 0, 0, 0.87);
-}
-h5-inverse,
-.h5-inverse {
-  color: #ffffff;
-}
-h6,
-.h6 {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  letter-spacing: 0.1px;
-  color: rgba(0, 0, 0, 0.87);
-}
-h6-inverse,
-.h6-inverse {
-  color: #ffffff;
-}
-h1,
 .h1,
 h2,
 .h2 {
+  font-weight: 400;
   margin: 40px 0 30px;
 }
 h3,
@@ -172,6 +172,7 @@ h5,
 .h5,
 h6,
 .h6 {
+  font-weight: 500;
   margin: 40px 0 20px;
 }
 .page-header {

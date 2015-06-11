@@ -28,6 +28,25 @@ p {
 }
 
 //## Headings
+h1, .h1 {
+  .font-variant(display-1);
+}
+h2, .h2 {
+  .font-variant(headline);
+}
+h3, .h3 {
+  .font-variant(subhead-1);
+}
+h4, .h4 {
+  .font-variant(body-2);
+}
+h5, .h5 {
+  .font-variant(body-2);
+}
+h6, .h6 {
+  .font-variant(body-1);
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   small,
@@ -38,35 +57,16 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-h1, .h1 {
-  .font-variant(display-1);
-}
-h2, .h2 {
-  .font-variant(headline);
-}
-h3, .h3 {
-  .font-variant(subhead-1);
-  font-weight: 500;
-}
-h4, .h4 {
-  .font-variant(body-2);
-  font-weight: 500;
-}
-h5, .h5 {
-  .font-variant(body-2);
-}
-h6, .h6 {
-  .font-variant(body-1);
-}
-
 h1, .h1,
 h2, .h2 {
+  font-weight: 400;
   margin: (@line-height-computed * 2) 0 (@line-height-computed * 1.5); // 40px 0 30px
 }
 h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
+  font-weight: 500;
   margin: (@line-height-computed * 2) 0 (@line-height-computed); // 40px 0 20px
 }
 
