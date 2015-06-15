@@ -218,18 +218,18 @@ blockquote {
       content: '\2014 \00A0'; // em dash, nbsp
     }
   }
+}
 
-  //## Opposite alignment of blockquote
-  &-reverse {
-    border-right: 5px solid @mdc-black-light;
-    border-left: 0;
-    text-align: right;
+//## Opposite alignment of blockquote
+.blockquote-reverse {
+  border-right: 5px solid @mdc-black-light;
+  border-left: 0;
+  text-align: right;
 
-    footer {
-      &:before { content: ''; }
-      &:after {
-        content: '\00A0 \2014'; // nbsp, em dash
-      }
+  footer {
+    &:before { content: ''; }
+    &:after {
+      content: '\00A0 \2014'; // nbsp, em dash
     }
   }
 }
