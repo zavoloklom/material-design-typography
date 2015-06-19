@@ -6,7 +6,6 @@
     "design",
     "typography"
   ],
-  "version": "0.1.0",
   "homepage": "https://github.com/zavoloklom/material-design-typography",
   "authors": [
     "Sergey Kupletsky <s.kupletsky@gmail.com>"
@@ -26,6 +25,7 @@
     "tests"
   ],
   "dependencies": {
-    "material-design-color-palette": "~1"
+    "material-design-color-palette": "~1",
+    "material-design-iconic-font": "~2"
   }
 }
