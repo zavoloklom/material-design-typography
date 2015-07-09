@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap-material-typography",
+  "name": "material-design-typography",
   "description": "Bootstrap Material Typography LESS/CSS Toolkit",
   "keywords": [
     "material",
@@ -8,11 +8,12 @@
   ],
   "homepage": "https://github.com/zavoloklom/material-design-typography",
   "authors": [
-    "Sergey Kupletsky <s.kupletsky@gmail.com>"
+    "Sergey Kupletsky <s.kupletsky@gmail.com> (http://github.com/zavoloklom)"
   ],
   "license": "MIT",
   "main": [
-    "./css/material-design-typography.css"
+    "./css/material-design-typography.css",
+    "./css/material-design-typography.min.css"
   ],
   "ignore": [
     "*/.*",
@@ -21,11 +22,8 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "test"
   ],
-  "dependencies": {
-    "material-design-color-palette": "~1",
-    "material-design-iconic-font": "~2"
-  }
+  "devDependencies": {},
+  "dependencies": {}
 }
