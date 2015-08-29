@@ -1,0 +1,10 @@
+//== Get font variables from variables.less by font style name
+
+.get-font-variables(@name) {
+  @font-size: ~"font-size-@{name}";
+  @font-weight: ~"font-weight-@{name}";
+  @line-height: ~"line-height-@{name}";
+  @letter-spacing: ~"letter-spacing-@{name}";
+  @font-color: ~"font-color-@{name}";
+  @font-color-inverse: ~"font-color-inverse-@{name}";
+}

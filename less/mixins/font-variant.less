@@ -1,0 +1,37 @@
+//== Get font variant
+
+.font-variant(@name, @rem: false) when (@rem = false) {
+  .get-font-variables(@name);
+  font-size: (@@font-size)+0px;
+  line-height: (@@line-height)+0px;
+  font-weight: @@font-weight;
+  letter-spacing: (@@letter-spacing/100)+0px;
+  color: @@font-color;
+}
+
+// rem units font-size mixin
+.font-variant(@name, @rem: false) when (@rem = true) {
+  .get-font-variables(@name);
+  font-size: (@@font-size/10)+0rem;
+  line-height: round(@@line-height/@@font-size, 8);
+  font-weight: @@font-weight;
+  letter-spacing: (@@letter-spacing/1000)+0rem;
+  color: @@font-color;
+}
+
+.typography-variant(@name, @rem: false) {
+  .get-font-variables(@name);
+
+  .@{zmdt-css-prefix}-@{name}, .@{zmdt-css-prefix}-@{name}-inverse {
+    font-size: (@@font-size)+0px;
+    line-height: (@@line-height)+0px;
+    font-weight: @@font-weight;
+    letter-spacing: (@@letter-spacing/100)+0px;
+  }
+  .@{zmdt-css-prefix}-@{name} {
+    color: @@font-color;
+  }
+  .@{zmdt-css-prefix}-@{name}-inverse {
+    color: @@font-color-inverse;
+  }
+}

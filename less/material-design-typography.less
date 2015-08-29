@@ -7,6 +7,10 @@
 @import "variables.less";
 @import "mixins.less";
 
+//## Import Font
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic|Roboto+Mono:400,300,300italic,400italic,500,500italic&subset=latin,cyrillic);
+
+
 //## Body
 body {
   font-family: @font-family-sans-serif;
@@ -16,14 +20,18 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+//## Strong text
+b, strong {
+  font-weight: 500;
+}
+
 //## Body text
 p {
   margin: 0 0 (@line-height-computed); // 0 0 20px
 }
 
 .lead {
-  margin-bottom: @line-height-computed; // 20px
-  .font-variant(title);
+  &:extend(.mdt-title);
   font-weight: 400;
 }
 
@@ -71,7 +79,7 @@ h6, .h6 {
 
 //## Page Header
 .page-header {
-  padding: 0;
+  padding: 30px 0 0;
   margin: (@line-height-computed * 2) 0; // 40px 0
   border: 0;
   border-top: 1px solid @mdc-black-lighter;
@@ -159,14 +167,7 @@ dd {
 // Then I can use @grid-float-breakpoint instead of 768px and special flex classes
 .dl-horizontal {
   @media (min-width: 768px) {
-
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
     align-items: flex-start;
 
     dt {
@@ -176,9 +177,6 @@ dd {
       .text-overflow();
     }
     dd {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-      -ms-flex: 1;
       flex: 1;
     }
   }
@@ -196,7 +194,7 @@ abbr[data-original-title] {
 }
 
 //## Blockquotes
-blockquote {
+.blockquote {
   .lead();
   padding: (@line-height-computed / 2) @line-height-computed; // 10px 20px
   margin: 0 0 @line-height-computed; // 0 0 20px
@@ -240,80 +238,7 @@ address {
   font-style: normal;
 }
 
-//## Contextual colors
-.text-muted {
-  color: @mdc-black-light;
-}
-.text-primary {  }
-.text-success {  }
-.text-info    {  }
-.text-warning {  }
-.text-danger  {  }
-
-//## Contextual backgrounds
-.bg-primary { }
-.bg-success { }
-.bg-info    { }
-.bg-warning { }
-.bg-danger  { }
-
-
-//## Material Design special classes
-.mdt-display-4 {
-  .font-variant(display-4);
-}
-.mdt-display-3 {
-  .font-variant(display-3);
-}
-.mdt-display-2 {
-  .font-variant(display-2);
-}
-.mdt-display-1 {
-  .font-variant(display-1);
-}
-.mdt-headline {
-  .font-variant(headline);
-}
-.mdt-title {
-  .font-variant(title);
-}
-.mdt-subhead-2 {
-  .font-variant(subhead-2);
-}
-.mdt-subhead-1 {
-  .font-variant(subhead-1);
-}
-.mdt-body-2 {
-  .font-variant(body-2);
-}
-.mdt-body-1 {
-  .font-variant(body-1);
-}
-.mdt-caption {
-  .font-variant(caption);
-}
-.mdt-button {
-  .font-variant(button);
-  .text-uppercase();
-}
-
-.mdt-display-4, .mdt-display-3, .mdt-display-2, .mdt-display-1  {
-  margin: (@line-height-computed) 0 (@line-height-computed * 1.5); // 20px 0 30px
-}
-
-.mdt-headline, .mdt-title, .mdt-subhead-2, .mdt-subhead-1, .mdt-body-2, .mdt-body-1 {
-  margin: (@line-height-computed) 0; // 20px 0
-}
-
-// TODO: ADD TO TYPOGRAPHY
-.page-header {
-  padding-top: 30px;
-  margin-bottom: 30px;
-}
-
-b, strong {
-  font-weight: 500;
-}
+//## Divider
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -321,6 +246,7 @@ hr {
   border-top: 1px solid @mdc-black-lighter;
 }
 
+//## Code
 code, kbd, pre, samp {
   font-family: @font-family-monospace;
 }
@@ -328,8 +254,8 @@ code, kbd, pre, samp {
 code {
   padding: 2px 4px;
   font-size: 90%;
-  color: @mdc-red-A700;
-  background-color: @mdc-grey-200;
+  color: @mdc-grey-700;
+  background-color: @mdc-black-lighter;
   border-radius: 2px;
 }
 pre {
@@ -344,5 +270,61 @@ pre {
   background-color: @mdc-grey-100;
   border: 1px solid @mdc-grey-200;
   border-radius: 2px;
+}
+
+//## Contextual colors
+.text-muted {
+  color: @mdc-black-light;
+}
+.text-primary { .text-variant(blue, false); }
+.text-success { .text-variant(green, false); }
+.text-info    { .text-variant(light-blue, false); }
+.text-warning { .text-variant(orange, false); }
+.text-danger  { .text-variant(red, false); }
+
+//## Contextual backgrounds
+.bg-primary { .bg-variant(blue, false); }
+.bg-success { .bg-variant(green, false); }
+.bg-info    { .bg-variant(light-blue, false); }
+.bg-warning { .bg-variant(orange, false); }
+.bg-danger  { .bg-variant(red, false); }
+
+//## Material Design special classes
+.typography-variant(display-4);
+.typography-variant(display-3);
+.typography-variant(display-2);
+.typography-variant(display-1);
+.typography-variant(headline);
+.typography-variant(title);
+.typography-variant(subhead-2);
+.typography-variant(subhead-1);
+.typography-variant(body-2);
+.typography-variant(body-1);
+.typography-variant(menu);
+.typography-variant(caption);
+.typography-variant(button);
+
+//## Material Design special classes addition
+.@{zmdt-css-prefix}-button,
+.@{zmdt-css-prefix}-button-inverse {
+  .text-uppercase();
+}
+.@{zmdt-css-prefix}-display-4,
+.@{zmdt-css-prefix}-display-3,
+.@{zmdt-css-prefix}-display-2,
+.@{zmdt-css-prefix}-display-1 {
+  &, &-inverse {
+    margin: (@line-height-computed) 0 (@line-height-computed * 1.5); // 20px 0 30px
+  }
+}
+.@{zmdt-css-prefix}-headline,
+.@{zmdt-css-prefix}-title,
+.@{zmdt-css-prefix}-subhead-2,
+.@{zmdt-css-prefix}-subhead-1,
+.@{zmdt-css-prefix}-body-2,
+.@{zmdt-css-prefix}-body-1{
+  &, &-inverse {
+    margin: (@line-height-computed) 0; // 20px 0
+  }
 }
 
