@@ -1,7 +1,7 @@
 {
   "name": "material-design-typography",
   "description": "Material Design Typography",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "keywords": [
     "material",
     "design",
@@ -36,5 +36,6 @@
     "time-grunt": "^1.2.1"
   },
   "dependencies": {
+    "material-design-color-palette": "^1"
   }
 }

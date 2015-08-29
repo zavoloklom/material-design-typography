@@ -24,9 +24,8 @@
     "bower_components",
     "test"
   ],
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
-    "material-design-color-palette": "*"
+    "material-design-color-palette": "~1"
   }
 }
