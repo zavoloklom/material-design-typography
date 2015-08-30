@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic|Roboto+Mono:400,300,300italic,400italic,500,500italic&subset=latin,cyrillic);
 body {
   font-family: 'Roboto', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -18,6 +17,11 @@ p {
   margin: 0 0 20px;
 }
 .lead {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  letter-spacing: 0.05px;
+  color: rgba(0, 0, 0, 0.87);
   font-weight: 400;
 }
 h1,
@@ -241,6 +245,11 @@ abbr[data-original-title] {
   text-transform: uppercase;
 }
 .blockquote {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  letter-spacing: 0.05px;
+  color: rgba(0, 0, 0, 0.87);
   font-weight: 400;
   padding: 10px 20px;
   margin: 0 0 20px;
