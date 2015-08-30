@@ -9,10 +9,6 @@
 @import "variables.less";
 @import "mixins.less";
 
-//## Import Font
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic|Roboto+Mono:400,300,300italic,400italic,500,500italic&subset=latin,cyrillic);
-
-
 //## Body
 body {
   font-family: @font-family-sans-serif;
@@ -278,18 +274,18 @@ pre {
 .text-muted {
   color: @mdc-black-light;
 }
-.text-primary { .text-variant(blue, false); }
-.text-success { .text-variant(green, false); }
-.text-info    { .text-variant(light-blue, false); }
-.text-warning { .text-variant(orange, false); }
-.text-danger  { .text-variant(red, false); }
+.text-primary { .zmd-text-variant(blue, false); }
+.text-success { .zmd-text-variant(green, false); }
+.text-info    { .zmd-text-variant(light-blue, false); }
+.text-warning { .zmd-text-variant(orange, false); }
+.text-danger  { .zmd-text-variant(red, false); }
 
 //## Contextual backgrounds
-.bg-primary { .bg-variant(blue, false); }
-.bg-success { .bg-variant(green, false); }
-.bg-info    { .bg-variant(light-blue, false); }
-.bg-warning { .bg-variant(orange, false); }
-.bg-danger  { .bg-variant(red, false); }
+.bg-primary { .zmd-bg-variant(blue, false); }
+.bg-success { .zmd-bg-variant(green, false); }
+.bg-info    { .zmd-bg-variant(light-blue, false); }
+.bg-warning { .zmd-bg-variant(orange, false); }
+.bg-danger  { .zmd-bg-variant(red, false); }
 
 //## Material Design special classes
 .typography-variant(display-4);
