@@ -5,5 +5,7 @@ default:
 prod:
   description: 'Production build'
   tasks:
-    - 'less'
-    - 'pleeease'
+    - 'clean:prod'
+    - 'less:prod'
+    - 'pleeease:prod'
+    - 'pleeease:prod-min'

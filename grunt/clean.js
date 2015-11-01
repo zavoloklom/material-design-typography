@@ -1,5 +1,5 @@
 module.exports = {
-    'sass-temp': [
-        "scss/tempw/"
+    'prod': [
+        "css/"
     ]
 };
